@@ -18,6 +18,7 @@ If number is 2, return "scissors"
 ```
 
 ### Human choice
+
 Create function `getHumanchoice` that will return one of the valid choices depending on user input.
 
 ```
@@ -30,6 +31,12 @@ If user input is valid, return 'humanChoice'
 ```
 
 ### Player score
+
+Declare variables to keep track of player score
+```
+Declare variable `humanScore` with value of 0
+Declare variable `computerScore` with value of 0
+```
 
 ### Single round
 
