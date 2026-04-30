@@ -21,31 +21,61 @@ function getHumanChoice() {
   return humanChoice;
 }
 
-let humanScore = 0;
-let computerScore = 0;
+function playGame() {
+  let humanScore = 0;
+  let computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {
+  function playRound(humanChoice, computerChoice) {
     const humanSelection = getHumanChoice().toLowerCase();
     const computerSelection = getComputerChoice().toLowerCase();
 
     if (humanSelection === computerSelection) {
-        console.log(`It's a draw! Both chose ${humanSelection}.`);
-        return;
+      console.log(`It's a draw! Both chose ${humanSelection}.`);
+      return;
     }
 
     if (
-        (humanSelection === "rock" && computerSelection === "scissors") ||
-        (humanSelection === "paper" && computerSelection === "rock") ||
-        (humanSelection === "scissors" && computerSelection === "paper")
+      (humanSelection === "rock" && computerSelection === "scissors") ||
+      (humanSelection === "paper" && computerSelection === "rock") ||
+      (humanSelection === "scissors" && computerSelection === "paper")
     ) {
-        humanScore++;
-        console.log(`You win! ${humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1)} beats ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)}.`);
+      humanScore++;
+      console.log(
+        `You win the round! ${humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1)} beats ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)}.`,
+      );
     } else {
-        computerScore++;
-        console.log(`You lose! ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)} beats ${humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1)}`);
+      computerScore++;
+      console.log(
+        `You lose the round! ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)} beats ${humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1)}`,
+      );
     }
+  }
+
+  for (let roundCounter = 0; roundCounter < 5; roundCounter++) {
+    const roundResult = playRound();
     console.log(`Player Score: ${humanScore}`);
     console.log(`Computer Score: ${computerScore}`);
+  }
+
+  if (humanScore === computerScore) {
+    console.log(`It's a draw!`);
+    console.log(`Final Score:`);
+    console.log(`Player Score: ${humanScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+  }
+
+  if (humanScore > computerScore) {
+    console.log(`You win the game!`);
+    console.log(`Final Score:`);
+    console.log(`Player Score: ${humanScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+  } else {
+    console.log(`Computer wins the game!`);
+    console.log(`Final Score:`);
+    console.log(`Player Score: ${humanScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+  }
+
 }
 
-console.log(playRound());
+console.log(playGame());

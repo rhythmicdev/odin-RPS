@@ -54,6 +54,7 @@ Create `playGame` function that calls `playRound` to play 5 rounds, keeps track 
 Declare `roundCounter` with value of 5
 Loop while `roundCounter` > 1
 Call `playRound` function
+Decrement `roundCounter` by 1
 If `roundCounter` = 0
 Check player and computer scores
 Announce user with higher score winner and show final scores
