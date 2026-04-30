@@ -1,9 +1,26 @@
 function getComputerChoice() {
-  const randomNum = Math.floor(Math.random() * 3);
+  const computerChoice = Math.floor(Math.random() * 3);
 
-  if (randomNum === 0) return "Rock";
-  if (randomNum === 1) return "Paper";
-  if (randomNum === 2) return "Scissors";
+  if (computerChoice === 0) return "Rock";
+  if (computerChoice === 1) return "Paper";
+  if (computerChoice === 2) return "Scissors";
 }
 
 console.log(getComputerChoice());
+
+function getHumanChoice() {
+  let humanChoice = prompt("Rock, paper, or scissors?").toLowerCase();
+
+  while (
+    humanChoice !== "rock" &&
+    humanChoice !== "paper" &&
+    humanChoice !== "scissors"
+  ) {
+    humanChoice = prompt(
+      "Please enter a valid choice! Rock, paper, or scissors?",
+    ).toLowerCase();
+  }
+  return humanChoice;
+}
+
+console.log(getHumanChoice());
