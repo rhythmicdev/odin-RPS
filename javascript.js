@@ -58,7 +58,7 @@ function playGame() {
   }
 
   if (humanScore === computerScore) {
-    console.log(`It's a draw!`);
+    console.log(`The game is a draw!`);
     console.log(`Final Score:`);
     console.log(`Player Score: ${humanScore}`);
     console.log(`Computer Score: ${computerScore}`);
