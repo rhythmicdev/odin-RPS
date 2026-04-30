@@ -75,7 +75,6 @@ function playGame() {
     console.log(`Player Score: ${humanScore}`);
     console.log(`Computer Score: ${computerScore}`);
   }
-
 }
 
 console.log(playGame());
