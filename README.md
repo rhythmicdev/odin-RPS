@@ -1,9 +1,5 @@
 # odin-RPS
 
-## Problem
-
-Write a function that randomly returns "rock", "paper", or "scissors".
-
 ## Pseudocode
 
 ### Computer choice
@@ -52,3 +48,13 @@ Else, increment computer score and log "You lose! ${computerChoice} beats ${huma
 ```
 
 ### Entire game
+Create `playGame` function that calls `playRound` to play 5 rounds, keeps track of the scores and declares a winner at the end.
+
+```
+Declare `roundCounter` with value of 5
+Loop while `roundCounter` > 1
+Call `playRound` function
+If `roundCounter` = 0
+Check player and computer scores
+Announce user with higher score winner and show final scores
+```
