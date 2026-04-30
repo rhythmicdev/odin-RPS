@@ -40,4 +40,15 @@ Declare variable `computerScore` with value of 0
 
 ### Single round
 
+Create function `playRound` that takes user and computer choices as arguments, plays a single round, increments the round winner's score and logs winner announcement.
+
+```
+Create function `playRound` with parameters `humanChoice` and `computerChoice`
+If `humanChoice` === `computerChoice`
+Log "It's a draw! Both chose ${humanChoice}."
+If user selects, rock and computer selects scissors OR user selects paper and computer selects rock OR user selects scissors and computer selects paper:
+Increment user score and log: "You win! ${humanChoice} beats ${computerChoice}."
+Else, increment computer score and log "You lose! ${computerChoice} beats ${humanChoice}."
+```
+
 ### Entire game
