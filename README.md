@@ -7,6 +7,7 @@ Write a function that randomly returns "rock", "paper", or "scissors".
 ## Pseudocode
 
 ### Computer choice
+Create function `getComputerChoice` that will randomly return "rock", "paper" or "scissors".
 ```
 Randomly generate number between 0 and 2
 If number is 0, return "rock"
