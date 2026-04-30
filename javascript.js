@@ -59,21 +59,18 @@ function playGame() {
 
   if (humanScore === computerScore) {
     console.log(`The game is a draw!`);
-    console.log(`Final Score:`);
-    console.log(`Player Score: ${humanScore}`);
-    console.log(`Computer Score: ${computerScore}`);
+    console.log(`Final Player Score: ${humanScore}`);
+    console.log(`Final Computer Score: ${computerScore}`);
   }
 
   if (humanScore > computerScore) {
     console.log(`You win the game!`);
-    console.log(`Final Score:`);
-    console.log(`Player Score: ${humanScore}`);
-    console.log(`Computer Score: ${computerScore}`);
-  } else {
+    console.log(`Final Player Score: ${humanScore}`);
+    console.log(`Final Computer Score: ${computerScore}`);
+  } else if (humanScore < computerScore) {
     console.log(`Computer wins the game!`);
-    console.log(`Final Score:`);
-    console.log(`Player Score: ${humanScore}`);
-    console.log(`Computer Score: ${computerScore}`);
+    console.log(`Final Player Score: ${humanScore}`);
+    console.log(`Final Computer Score: ${computerScore}`);
   }
 }
 
